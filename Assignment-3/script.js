@@ -18,9 +18,15 @@ var socialMedia = {
 //Add a row upon click
 var t = new Title("CONNECT WITH ME!");
 var rowCount=3;
+
 function addNewValue(){
   var mainTable=document.getElementById("myTable");//getting the table
   rowCount++;
+
+  if(rowCount>10){
+    alert("Error Adding new student, maximum 10 students allowed");
+    return false;
+  }
 
   var tabletr=document.createElement("tr"); //creating a row
   tabletr.id="rowId" ; 
